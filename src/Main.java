@@ -31,7 +31,7 @@ public class Main {
             System.out.println("Минимальная зарплата сотрудника " + employeeMinSalary);
         }
         separation();
-        System.out.println("Среднее значение зарплат " + calculeteSumSalary() / 2);
+        System.out.println("Среднее значение зарплат " + averageSalary());
         separation();
         printAllNames();
         separation();
@@ -79,5 +79,14 @@ public class Main {
             System.out.println(employee.getFullname());
 
         }
+    }
+    public static int averageSalary() {
+        int sum = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                sum += employee.getSalary() / 10;
+            }
+        }
+        return sum;
     }
 }
