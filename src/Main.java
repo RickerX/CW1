@@ -84,9 +84,10 @@ public class Main {
         int sum = 0;
         for (Employee employee : employees) {
             if (employee != null) {
-                sum += employee.getSalary() / 10;
+                sum += employee.getSalary();
             }
         }
-        return sum;
+        return (sum/employees.length);
     }
+
 }
